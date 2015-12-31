@@ -1,0 +1,26 @@
+/**************************************************
+ ILLUSTRATION STYLES
+**************************************************/
+
+.illustration {
+  @extend %border-padding;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  background-color: $illustration-bg;
+  border-bottom: none;
+  height: 200px;
+  @include break-up($small){height:300px}
+  @include break-up($large){height:400px}
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 600px;
+    max-width: none;
+    margin-left: -300px;
+    @include break-up($small){width:900px;margin-left:-450px}
+    @include break-up($large){width:1200px;margin-left:-600px}
+  }
+}

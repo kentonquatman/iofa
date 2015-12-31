@@ -1,0 +1,56 @@
+/**************************************************
+ SUB-NAV STYLES
+**************************************************/
+
+aside {
+  max-width: 36em;
+  margin: 0 auto;
+  padding: 1.5em;
+  background-color: $sidebar-bg;
+  h4 {
+    margin: 0 0 .75em;
+    color: $sidebar-headline-text;
+    text-align: center;
+  }
+  a {
+    color: $sidebar-link-text;
+    &:hover,&:focus{color:$sidebar-link-hover-text}
+  }
+}
+
+%sidebar-links {
+  ul {list-style:none;margin:0}
+  li {
+    @include font-size(14);
+    margin: 3px 0;
+    font-family: $sidebar-link-font;
+  }
+  a {
+    display: block;
+    padding: .25em .75em;
+    background-color: $sidebar-subnav-link-bg;
+    color: $sidebar-subnav-link-text;
+    -webkit-font-smoothing: antialiased;
+    &:hover,
+    &:focus {
+      background-color: $sidebar-subnav-link-hover-bg;
+      color: $sidebar-subnav-link-hover-text;
+    }
+  }
+}
+
+.sub-nav, 
+.related-projects {
+  @extend %minor-column;
+  @extend %sidebar-links;
+}
+
+.sidebar {
+  @extend %minor-column;
+  .sub-nav {margin-bottom:3em}
+  .sub-nav,
+  .related-projects {
+    float: none;
+    width: auto;
+  }
+}

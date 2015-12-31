@@ -1,0 +1,15 @@
+/**************************************************
+ SUPPORTERS PAGE STYLES
+**************************************************/
+
+.page-list.partners {
+  @extend %category-list;
+  a {
+    border-bottom: 1px solid $lt-purple;
+    color: $purple;
+    &:hover,
+    &:focus {
+      border-bottom-color: $purple;
+    }
+  }
+}

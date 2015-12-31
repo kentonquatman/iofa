@@ -1,0 +1,73 @@
+/**************************************************
+ MAIN SECTION STYLES
+**************************************************/
+
+.main {
+  @extend %border-padding;
+  background-color: $main-bg;
+  border-top: none;
+  border-bottom: none;
+  @include break-up($large){
+    padding-top: $fixed-header-padding;
+  }
+  .inner {
+    @extend %clearfix;
+    @include box-sizing(content-box);
+    padding: 3em $side-padding 4.5em;
+    @include break-up($medium){
+      padding-top: 4.5em;
+      padding-bottom: 9em;
+    }
+  }
+  header {
+    padding: 3em $side-padding;
+    background-color: $main-header-bg;
+    border-bottom: 3px solid $border-padding-color;
+    @include break-up($medium){
+      padding-top: 4.5em;
+      padding-bottom: 4.5em;
+    }
+    h1 {
+      @extend %center-column;
+      margin-top: 0;
+      margin-bottom: 0;
+      color: $main-header-text;
+      @include break-up($x-large){
+        @include font-size(42);
+      }
+    }
+  }
+  article {
+    @extend %clearfix;
+    @extend %major-column;
+    margin-bottom: 4.5em;
+    padding: 3em;
+    background-color: $main-article-bg;
+    @include break-up($xx-small){ padding-bottom: 4.5em }
+    @include break-up($small){ padding: 3em 4.5em 6em }
+    @include break-up($medium){ margin-bottom: 0 }
+    p, li, article { max-width: 42em }
+  }
+}
+
+.page-list {
+  margin: 3em 0 0;
+  padding-top: 3em;
+  border-top: 1px solid $border-color;
+  li {
+    @include break-inside(avoid);
+    margin-left: 1.5em;
+  }
+  @include break-up($small){
+    @include column-count(2);
+    @include column-gap(3em);
+  }
+  @include break-up($medium){
+    @include column-count(1);
+    @include column-gap(0);
+  }
+  @include break-up($large){
+    @include column-count(2);
+    @include column-gap(3em);
+  }
+}

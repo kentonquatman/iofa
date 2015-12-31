@@ -1,0 +1,32 @@
+/**************************************************
+ EVENTS SECTION STYLES
+**************************************************/
+
+.event-list { @extend %article-list }
+
+.event-list article,
+.event-article {
+  .main & { padding-bottom: 4.5em }
+  .event-top {
+    margin-bottom: 1.5em;
+    padding: 0 0 1.5em;
+    background-color: transparent;
+    border-bottom: 1px solid $border-color;
+    p, address { margin: 0 }
+    p { font-weight: bold }
+    h1, h2 {
+      margin: 0 0 .25em;
+      color: $event-title-color;
+    }
+    .event-date {
+      margin-bottom: .5em;
+      color: $event-date-color;
+      font-family: $event-date-font;
+    }
+  }
+  .button {
+    margin: 2em 0 0 -.25em;
+    max-width: 270px;
+    text-align: center;
+  }
+}

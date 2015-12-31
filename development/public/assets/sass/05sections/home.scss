@@ -1,0 +1,122 @@
+/**************************************************
+ HOME PAGE STYLES
+**************************************************/
+
+section.mission {
+  padding: 6em $side-padding;
+  background-color: $home-mission-bg;
+  article {
+    float: none;
+    width: auto;
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+  h1 {margin:0 0 .75em}
+  p, li, address {
+    @include font-size(16);
+    @include break-up($large){
+      @include font-size(18);
+    }
+  }
+}
+
+section.blog {
+  @extend %border-padding;
+  padding: 4.5em $side-padding;
+  background-color: $home-blog-bg;
+  border-bottom: none;
+  @include break-up($medium){
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+  .inner { position: relative }
+  .title {
+    margin: 0 0 1.5em;
+    color: $home-blog-heading-color;
+    font-weight: normal;
+    @include break-up($medium){margin-top:-1em}
+    a {
+      color: $home-blog-heading-link;
+      font-weight: bold;
+      white-space: nowrap;
+      &:hover,&:focus {color:$home-blog-heading-hover}
+    }
+  }
+  .posts {
+    @include break-up($small){width:102.5%;margin-left:-2.5%}
+    @include break-up($x-large){width:101.25%;margin-left: -1.25%}
+  }
+  article {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.5em;
+    padding: 2em 3em 6em;
+    background-color: $home-article-bg;
+    border: 1px solid $home-article-border;
+    @include break-up($small){
+      @include float;
+      width: 47.5%;
+      margin-left: 2.5%;
+      margin-bottom: 2.5%;
+      &:nth-child(odd){clear:left}
+    }
+    @include break-up($x-large){
+      width: 23.75%;
+      margin-left: 1.25%;
+      margin-bottom: 0;
+      padding-left: 2em;
+      padding-right: 2em;
+      &:nth-child(odd){clear:none}
+      p {@include font-size(14)}
+    }
+    header {
+      margin-bottom: 2em;
+      padding-bottom: 2em;
+      border-bottom: 1px solid $border-color;
+      h3 {
+        margin: 0;
+        @include break-up($x-large){@include font-size(21)}
+      }
+      p {
+        @include font-size(12);
+        margin: 0 0 .75em;
+        color: $home-blog-date;
+        font-family: $sans-serif;
+        text-transform: uppercase;
+      }
+    }
+    footer {
+      position: absolute;
+      left: -1px;
+      right: -1px;
+      bottom: -1px;
+      a {
+        @include font-size(14);
+        display: block;
+        padding: 1em 2em;
+        background-color: $home-blog-button-color;
+        color: $home-blog-button-text;
+        font-family: $button-font;
+        &:hover,&:focus{background-color:$home-blog-button-hover}
+        &:after {
+          content: $triangle-right;
+          float: right;
+          margin-right: -.5em;
+          color: darken($purple, 10%);
+        }
+      }
+    }
+  }
+  .button {
+    margin: 3em 0;
+    text-align: center;
+    @include break-up($small){
+      position: absolute;
+      top: -.5em;
+      right: 0;
+      margin: 0;
+    }
+  }
+}

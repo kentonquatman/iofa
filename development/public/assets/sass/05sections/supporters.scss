@@ -1,0 +1,16 @@
+/**************************************************
+ SUPPORTERS PAGE STYLES
+**************************************************/
+
+.group-heading {
+  margin: 2.25em 0 0;
+}
+
+%category-list {
+  margin-top: 1.5em;
+  padding-top: 1.5em;
+}
+
+.page-list.supporters {
+  @extend %category-list;
+}

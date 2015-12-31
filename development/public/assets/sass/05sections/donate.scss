@@ -1,0 +1,25 @@
+/**************************************************
+ DONATE SECTION STYLES
+**************************************************/
+
+.paypal-button {
+  @include border-radius;
+  max-width: 30em;
+  margin: 3em 0;
+  padding: 2.5em;
+  background-color: $paypal-button-bg;
+  border: 1px solid $paypal-button-border;
+  text-align: center;
+  form {
+    padding: 0;
+    background-color: transparent;
+    text-align: center;
+  }
+}
+
+.legal-text { 
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid $border-color;
+  p {@include font-size(12)}
+}

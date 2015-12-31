@@ -1,0 +1,27 @@
+/**************************************************
+ CONTACT PAGE STYLES
+**************************************************/
+
+.main {
+  .contact-info {
+    @extend %minor-column;
+    text-align: center;
+    address, p {
+      @include font-size(16);
+      margin: .25em 0 0;
+      padding: .5em;
+      background-color: $sidebar-text-bg;
+    }
+  }
+}
+
+.contact-form {
+  @extend %border-padding;
+  @extend %major-column;
+  margin-bottom: 3em;
+  @include break-up($medium){margin-bottom:0}
+  input[type="submit"]{
+    margin-top: 1.5em;
+    @include break-up($large){ width: 50% }
+  }
+}

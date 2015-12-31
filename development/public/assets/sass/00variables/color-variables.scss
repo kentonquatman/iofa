@@ -1,0 +1,190 @@
+/**************************************************
+ COLOR PALETTE
+**************************************************/
+
+$purple: #601f66;
+$lt-purple: #f4edf5;
+
+$yellow: #ffc44d;
+$lt-yellow: #f2e6ce;
+
+$black: #222622;
+$dk-gray: #4c454d;
+$gray: #7f7980;
+$lt-gray: #cbc6cc;
+$white: #fff;
+
+$red: #e65245;
+
+/**************************************************
+ COLOR USAGE
+**************************************************/
+
+$selection-bg: transparentize($yellow,.25);
+$selection-text: $black;
+
+// Base Colors
+
+$body-bg: $white;
+$body-text: $black;
+$border-color: $lt-gray;
+$border-padding-color: $white;
+$headline-color: $purple;
+
+// Link Colors
+
+$link-color: darken($yellow,10%);
+$link-hover: darken($yellow,20%);
+
+// Form Colors
+
+$form-bg: $white;
+$form-field-bg: $white;
+$form-field-border: $lt-gray;
+$form-label-text: $dk-gray;
+$form-placeholder-text: $gray;
+
+$error-message-bg: lighten($red,30%);
+$error-message-border: $red;
+$error-message-headline: $red;
+$required-indicator: $red;
+
+$captcha-bg: lighten($lt-gray, 15%);
+$captcha-border: $lt-gray;
+
+// Table Colors
+
+$table-heading-bg: $purple;
+$table-row-bg: lighten($lt-gray, 18%);
+$table-row-odd-bg: $white;
+
+// Button Colors
+
+$button-color: $white;
+$button-text: $white;
+$button-bg: $yellow;
+
+// Header Colors
+
+$header-bg: $white;
+$header-logo-bg: $purple;
+$header-logo-hover: darken($purple,5%);
+$header-donate-button-text: $white;
+$header-donate-button-bg: $yellow;
+$header-donate-button-hover: darken($yellow,10%);
+
+// Navigation Colors
+
+$nav-link-text: $gray;
+$nav-link-bg: $white;
+$nav-link-text-hover: $purple;
+$nav-link-bg-hover: $lt-purple;
+
+$sub-nav-bg: $white;
+$sub-nav-bg-hover: $lt-purple;
+$sub-nav-border: $yellow;
+
+$narrow-nav-bg: $purple;
+$narrow-nav-text: $white;
+$narrow-toplevel-bg: $purple;
+$narrow-subnav-text: $dk-gray;
+$narrow-subnav-bg: $lt-purple;
+
+$nav-toggle-bg: $yellow;
+$nav-toggle-hover: darken($yellow,5%);
+
+// Footer Colors
+
+$footer-bg: $purple;
+$footer-text: $white;
+$footer-link: $yellow;
+$footer-link-hover: $lt-yellow;
+$footer-nav-border: $white;
+$footer-module-border: darken($purple,5%);
+$footer-social-icon-bg: $yellow;
+$footer-social-icon-hover: $lt-yellow;
+$footer-form-bg: $lt-purple;
+$footer-form-border: darken($lt-purple,20%);
+$sub-footer-bg: darken($footer-bg,10%);
+
+// Main Colors
+
+$main-bg: $lt-purple;
+$main-header-bg: darken($purple,5%);
+$main-header-text: $white;
+$main-article-bg: $white;
+$illustration-bg: $yellow;
+
+// Sidebar Colors
+
+$sidebar-bg: $purple;
+$sidebar-text-bg: $white;
+$sidebar-headline-text: $white;
+$sidebar-link-text: $yellow;
+$sidebar-link-hover-text: $lt-yellow;
+$sidebar-subnav-link-bg: $white;
+$sidebar-subnav-link-text: $gray;
+$sidebar-subnav-link-hover-bg: $lt-purple;
+$sidebar-subnav-link-hover-text: $purple;
+
+// Home Page Colors
+
+$home-mission-bg: $white;
+$home-blog-bg: $lt-purple;
+$home-blog-heading-color: $dk-gray;
+$home-blog-heading-link: $purple;
+$home-blog-heading-hover: lighten($purple,10%);
+$home-blog-date: $gray;
+$home-article-bg: $white;
+$home-article-border: darken($lt-purple,5%);
+$home-blog-button-text: $white;
+$home-blog-button-color: $purple;
+$home-blog-button-hover: lighten($purple,10%);
+
+$slider-bg: $yellow;
+$slider-border: $purple;
+$slider-headline-color: $purple;
+$slider-summary-bg: $white;
+$slider-summary-border: $yellow;
+$slider-summary-text: $body-text;
+$slide-summary-hover-bg: $purple;
+$slide-summary-hover-text: $white;
+$slide-pager-bg: $purple;
+$slide-marker: $white;
+$slide-marker-hover: $lt-yellow;
+$slide-marker-active: $yellow;
+
+$directional-nav-bg: $white;
+$directional-nav-border: $yellow;
+
+// Projects Section Colors
+
+$past-projects-bg: $white;
+$past-projects-headline: $gray;
+$past-projects-link-bg: $purple;
+$past-projects-link-text: $white;
+$past-projects-link-hover-bg: lighten($purple,10%);
+$past-projects-link-hover-text: $white;
+
+// Blog Section Colors
+
+$post-title-text: $gray;
+$post-details-text: $gray;
+$pagination-bg: darken($lt-purple,5%);
+
+// Event Section Color
+
+$event-date-color: $gray;
+$event-title-color: $gray;
+
+// Donations Page Colors
+
+$paypal-button-bg: lighten($lt-gray, 15%);
+$paypal-button-border: $lt-gray;
+
+// Resources Page Colors
+
+$document-button-bg: lighten($lt-gray,15%);
+$document-button-border: $lt-gray;
+$document-button-hover-bg: lighten($yellow,15%);
+$document-button-hover-border: $yellow;

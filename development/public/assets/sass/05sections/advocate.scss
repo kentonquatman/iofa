@@ -1,0 +1,18 @@
+/**************************************************
+ ADVOCATE PAGE STYLES
+**************************************************/
+
+.advocate-list {
+  @extend %article-list;
+  article {padding-bottom:3em}
+  h2 {margin: 0 0 .5em}
+  .deadline {
+    margin-top: 1.5em;
+    font-family: $sans-serif;
+  }
+  .button {
+    margin: 1.75em 0 .5em -.25em;
+    max-width: 270px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,40 @@
+/**************************************************
+ DEFAULT TABLE STYLES
+**************************************************/
+
+table {
+  @include font-size(14);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: $sans-serif;
+  line-height: 1.4;
+  @include break-up($large){
+    @include font-size(16);
+  }
+}
+
+tr {
+  background-color: $table-row-bg;
+  &:nth-child(odd){
+    background-color: $table-row-odd-bg;
+  }
+}
+
+td, th {
+  padding: .75em 1em;
+  border: 1px solid $white;
+}
+
+th {
+  background-color: $table-heading-bg;
+  color: $white;
+}
+
+.jobs-table {
+  margin-top: 3em;
+  .job-type {
+    text-align: center;
+    @include break-up($x-small){width:10em}
+  }
+}

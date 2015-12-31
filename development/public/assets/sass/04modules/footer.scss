@@ -1,0 +1,208 @@
+/**************************************************
+ FOOTER STYLES
+**************************************************/
+
+%footer-bg { background-color: $footer-bg }
+
+.site-footer {
+  @extend %clearfix;
+  @extend %border-padding;
+  color: $footer-text;
+  .inner {
+    @include box-sizing(content-box);
+    overflow: hidden;
+    padding: 6em $side-padding;
+  }
+  nav {
+    display: none;
+    float: right;
+    @include break-up($medium){display:block}
+    li {
+      display: inline;
+      margin-left: 1em;
+      padding-left: 1em;
+      border-left: 1px solid $footer-nav-border;
+      &:first-child {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+      }
+    }
+  }
+  a {
+    color: $footer-link;
+    &:hover,
+    &:focus {
+      color: $footer-link-hover;
+    }
+  }
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    @include break-up($medium){
+      @include float;
+    }
+    a {
+      display: block;
+      overflow: hidden;
+      height: 0;
+      width: 100px;
+      padding-top: 40px;
+      margin: 0 auto;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      @include hires("../img/logo/iofa-header-logo.png", "../img/logo/iofa-header-logo-2x.png");
+      &:hover,&:focus {@include opacity(.5)}
+    }
+  }
+}
+
+%footer-module {
+  padding-top: 3em;
+  margin-top: 3em;
+  border-top: 3px solid $footer-module-border;
+  text-align: center;
+  @include break-up($medium){
+    float: right;
+    width: 30%;
+    margin-top: 0;
+    margin-left: 5%;
+    padding-top: 2em;
+  }
+  h4 {
+    margin: 0 0 1em;
+    color: $footer-text;
+  }
+}
+
+.site-footer {
+  .twitter-feed {
+    @extend %footer-module;
+    clear: left;
+    .twitter-feed__module {
+      background-color: $footer-form-bg;
+      max-width: 300px;
+      margin: 2em auto;
+      padding: 1.5em;
+      ul {
+        list-style: none;
+        margin: 0;
+        text-align: left;
+      }
+      li {
+        @include font-size(10);
+        margin: 0 0 1em;
+        padding: 1em;
+        background-color: $white;
+        border: 1px solid $footer-form-border;
+        color: $body-text;
+        font-family: $sans-serif;
+        .tweet-text {
+          @include font-size(12);
+          display: block;
+        }
+        .tweet-details {
+          @include font-size(11);
+          display: block;
+          margin-top: .75em;
+          color: gray;
+          text-transform: uppercase;
+        }
+      }
+      .button {
+        @include border-radius(0);
+        margin-top: 0;
+        padding: .5em;
+        color: $button-text;
+        line-height: normal;
+      }
+    }
+  }
+  .mailing-list {
+    @extend %footer-module;
+    form {
+      max-width: 300px;
+      margin: 2em auto 0;
+      padding: 1.5em;
+      background-color: $footer-form-bg;
+      border: none;
+    }
+    input[type="text"]{
+      margin-bottom: .75em;
+      border-color: $footer-form-border;
+    }
+    input[type="submit"]{
+      @extend %button;
+      @include border-radius(0);
+      margin-top: 0;
+      padding: .5em;
+    }
+    .response {
+      @include border-radius;
+      @include font-size(13);
+      margin: 1.5em 0;
+      padding: .75em 1em;
+      background-color: $form-field-bg;
+      border: 1px solid $footer-form-border;
+      color: $body-text;
+      line-height: 1.4;
+      text-align: left;
+    }
+  }
+  .contact-info {
+    @extend %footer-module;
+    margin-left: 0;
+    @include break-up($medium){
+      text-align: left;
+    }
+    address, p {
+      @include font-size(18);
+      margin: 0;
+      em {
+        color: $lt-purple;
+        font-style: normal;
+      }
+    }
+    .social-links {
+      list-style: none;
+      margin:  3em auto 0;
+      li {
+        @include inline-block;
+        @include font-size(10);
+        margin: 0 .5em;
+        @include break-up($medium){
+          margin-left: 0;
+          margin-right: 1em;
+        }
+        a {
+          @include border-radius(50%);
+          overflow: hidden;
+          display: block;
+          height: 0;
+          padding-top: 3em;
+          width: 3em;
+          background: $footer-social-icon-bg url("../img/graphics/social-icon-sprite.svg") 0 0 no-repeat;
+          background-size: 30px 210px;
+          &:hover,&:focus {background-color:$footer-social-icon-hover}
+          .ltie9 & {background-image:url("../img/graphics/social-icon-sprite.png")}
+        }
+        &.twitter a {background-position: 0 0}
+        &.facebook a {background-position: 0 -30px}
+        &.youtube a {background-position: 0 -60px}
+        &.linkedin a {background-position: 0 -90px}
+        &.vimeo a {background-position: 0 -120px}
+        &.googleplus a {background-position: 0 -150px}
+        &.instagram a {background-position: 0 -180px}
+      }
+    }
+  }
+  .sub-footer {
+    padding: 1.5em $side-padding;
+    background-color: $sub-footer-bg;
+    text-align: center;
+    small {
+      @extend %center-column;
+      @include break-up($medium){text-align:right}
+    }
+  }
+}

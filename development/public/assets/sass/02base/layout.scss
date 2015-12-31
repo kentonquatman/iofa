@@ -1,0 +1,36 @@
+/**************************************************
+ LAYOUT STYLES
+**************************************************/
+
+%center-column {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%major-column {
+  margin-top: -4.5em;
+  @include break-up($medium){
+    float: left;
+    width: 65%;
+    margin-top: -7.5em;
+  }
+  @include break-up($large){width:70%}
+}
+
+%minor-column {
+  @include break-up($medium){
+    float: right;
+    width: 30%;
+  }
+  @include break-up($large){width:25%}
+}
+
+%column-reset {
+  float: none;
+  display: block;
+  width: auto;
+}
+
+.inner {@extend %center-column}
+section {@extend %clearfix}

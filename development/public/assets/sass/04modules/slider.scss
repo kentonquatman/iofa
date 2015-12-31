@@ -1,0 +1,184 @@
+/**************************************************
+ SLIDE SHOW STYLES
+**************************************************/
+
+.slideshow {
+  @extend %border-padding;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background-color: $slider-bg;
+  border-top: none;
+  @include break-up($large){ margin-top: 9em }
+  &.loading {
+    height: 18em;
+    background-image: url("../img/graphics/loading-icon.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 49px 49px;
+    @include break-up($medium){ height: 30em }
+    .no-js & { height: auto; min-height: 30em }
+  }
+}
+
+.flex-viewport, 
+.flex-control-nav, 
+.flex-direction-nav {
+  @include transition(1s);
+  @include opacity(1);
+  .loading & { @include opacity(0) }
+}
+
+.flex-viewport {
+  max-height: 90em;
+  .loading & {
+    max-height: 18em;
+    @include break-up($medium){ max-height: 30em }
+  }
+}
+
+.slides {
+  margin: 0;
+  li {
+    @include font-size(10);
+    overflow: hidden;
+    position: relative;
+    display: none;
+    margin: 0;
+    -webkit-backface-visibility: hidden;
+    @include break-up($medium){ height: 570px }
+    @include break-up($x-large){ height: 600px }
+    .no-js & {
+      border-bottom: 3px solid $slider-border;
+      &:first-child { display: block }
+    }
+  }
+  img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    @include break-up($medium){
+      position: absolute;
+      max-width: none;
+      width: 960px;
+      top: 0;
+      left: 50%;
+      margin-left: -480px;
+    }
+    @include break-up($large){
+      width: 1080px;
+      margin-top: -40px;
+      margin-left: -540px;
+    }
+    @include break-up($x-large){
+      width: 1200px;
+      margin-top: -60px;
+      margin-left: -600px;
+    }
+  }
+  .summary {
+    position: relative;
+    z-index: 2;
+    border: 3px solid $slider-summary-border;
+    margin: -3em 1.5em 1.5em;
+    @include break-up($medium){
+      @include transition-duration(.5s);
+      @include transition-delay(.5s);
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      bottom: 3em;
+      width: 50%;
+      max-width: 540px;
+      margin-left: -50%;
+      margin-bottom: 0;
+      border-left: none;
+      .loading & { margin-bottom: -20em }
+      .no-js & { margin-bottom: 0 }
+    }
+    @include break-up(1260){ left: 50%; margin-left: -100% }
+    h3 {
+      margin: 0 0 .25em;
+      color: $slider-headline-color;
+    }
+    p {
+      margin: 0;
+      color: $slider-summary-text;
+    }
+  }
+  a {
+    display: block;
+    padding: 2em $side-padding 2.5em;
+    background-color: $slider-summary-bg;
+    &:hover {
+      background-color: $slide-summary-hover-bg;
+      h3,p{ color: $slide-summary-hover-text }
+    }
+  }
+  .flex-active-slide, 
+  .no-js & {
+    .summary {
+      @include break-up($medium){ margin-left: 0 }
+      @include break-up(1260){ margin-left: -630px }
+    }
+  }
+}
+
+.flex-control-nav {
+  margin: 0;
+  padding: 1.25em;
+  background-color: $slide-pager-bg;
+  text-align: center;
+  list-style: none;
+  li {
+    @include inline-block;
+    @include font-size(10);
+    margin: 0 1.5em;
+    a {
+      @include border-radius(50%);
+      display: block;
+      overflow: hidden;
+      height: 0;
+      width: 1.5em;
+      padding-top: 1.5em;
+      background-color: $slide-marker;
+      &:hover {
+        background-color: $slide-marker-hover;
+      }
+      &.flex-active {
+        background-color: $slide-marker-active;
+      }
+    }
+  }
+  @include break-up($medium){
+    padding-right: $side-padding;
+    text-align: right;
+    li { margin: 0 .75em }
+  }
+}
+
+.flex-direction-nav {
+  display: none;
+  list-style: none;
+  margin: 0;
+  @include break-up($medium){ display: block }
+  li{ @include font-size(10); margin: 0 }
+  a {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    height: 0;
+    width: 5.1em;
+    padding-top: 4.8em;
+    margin-top: -2.4em;
+    background: $directional-nav-bg url("../img/graphics/slide-arrow-sprite.svg") 0 0 no-repeat;
+    background-size: 48px 96px;
+    border: 3px solid $directional-nav-border;
+    &.flex-prev { left: 0; background-position: 0 -48px; border-left: 0 }
+    &.flex-next { right: 0; background-position: 0 0; border-right: 0}
+    .ltie9 { background-image: url("../img/graphics/slide-arrow-sprite.gif") }
+  }
+}

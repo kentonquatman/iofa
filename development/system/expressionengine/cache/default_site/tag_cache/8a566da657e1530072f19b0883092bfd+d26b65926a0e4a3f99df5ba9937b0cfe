@@ -1,0 +1,20 @@
+a:3:{s:4:"time";i:1426713737;s:3:"ttl";i:0;s:4:"data";s:617:"<h4 class="group-heading">All Partners</h4>
+      <ul class="page-list partners">
+      {exp:channel:entries
+        channel="partners"
+        dynamic="off"
+        category="41"
+        uncategorized_entries="no"
+        orderby="title"
+        sort="asc"
+        cache="yes"
+        refresh="1440"
+        disable="category_fields|member_data|pagination"
+      }
+        {!-- ra:000000001f8b4942000000016b088280 --}{if partner_link_url != ''}
+        <li><a href="{partner_link_url}" target="_blank">{title}</a></li>
+        {if:else}
+        <li>{title}</li>
+        {/if}
+      {/exp:channel:entries}
+      </ul>";}

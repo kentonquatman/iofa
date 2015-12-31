@@ -1,0 +1,52 @@
+/**************************************************
+ STAFF PAGE STYLES
+**************************************************/
+
+.staff-list {
+  @extend %article-list;
+  .group-heading {
+    margin: 0;
+    padding: 1em 1.25em;
+    background-color: $white;
+  }
+  article {
+    margin-bottom: 1.5em;
+    padding-bottom: 4.5em;
+  }
+  figure {
+    float: left;
+    width: 7.5em;
+    margin-bottom: 3em;
+    @include break-up($x-small){ width: 9em }
+    @include break-up($large){ width: 12em }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .staff-info {
+    margin-left: 9em;
+    margin-bottom: 3em;
+    @include break-up($x-small){ margin-left: 12em }
+    @include break-up($large){ margin-left: 15em }
+    h3 {
+      margin: 0 0 .25em;
+      @include break-up($x-small){ margin-top: .375em }
+      @include break-up($large){ margin-top: .625em }
+    }
+    p { margin: 0 0 .125em }
+  }
+  .staff-bio {
+    clear: both;
+    p, li, address {
+      @include font-size(14);
+      max-width: none;
+    }
+  }
+  .staff-group {
+    margin-bottom: 3em;
+    article {
+      margin: 1.5em 0 0;
+    }
+  }
+}

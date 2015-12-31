@@ -1,0 +1,94 @@
+a:3:{s:4:"time";i:1426713740;s:3:"ttl";i:0;s:4:"data";s:3194:"<div class="staff-group">
+        <h4 class="group-heading">Board of Directors</h4>
+        {exp:channel:entries
+          channel="leadership"
+          dynamic="off"
+          category="42"
+          uncategorized_entries="no"
+          orderby="title"
+          sort="asc"
+          cache="yes"
+          refresh="1440"
+          disable="category_fields|member_data|pagination"
+        }
+        <article>
+          <figure>
+            {!-- ra:0000000013ea8aea000000017e767761 --}{if staff_photo == ''}
+            <img src="{site_url}assets/img/graphics/staff-icon-01.png" alt="{title} Photo">
+            {if:else}
+            <img src="{staff_photo:url:150}" alt="{title} Photo">
+            {/if}
+          </figure>
+          <div class="staff-info">
+            <h3>{title}</h3>
+            <p><strong>{staff_position}</strong></p>
+            <p><a href="mailto:{staff_email}">{staff_email}</a></p>
+          </div>
+          <div class="staff-bio">
+            {staff_bio}
+          </div>
+        </article>
+        {/exp:channel:entries}
+      </div><div class="staff-group">
+        <h4 class="group-heading">Board Member Emeritus</h4>
+        {exp:channel:entries
+          channel="leadership"
+          dynamic="off"
+          category="43"
+          uncategorized_entries="no"
+          orderby="title"
+          sort="asc"
+          cache="yes"
+          refresh="1440"
+          disable="category_fields|member_data|pagination"
+        }
+        <article>
+          <figure>
+            {!-- ra:0000000013ea8aea000000017e767761 --}{if staff_photo == ''}
+            <img src="{site_url}assets/img/graphics/staff-icon-01.png" alt="{title} Photo">
+            {if:else}
+            <img src="{staff_photo:url:150}" alt="{title} Photo">
+            {/if}
+          </figure>
+          <div class="staff-info">
+            <h3>{title}</h3>
+            <p><strong>{staff_position}</strong></p>
+            <p><a href="mailto:{staff_email}">{staff_email}</a></p>
+          </div>
+          <div class="staff-bio">
+            {staff_bio}
+          </div>
+        </article>
+        {/exp:channel:entries}
+      </div><div class="staff-group">
+        <h4 class="group-heading">Advisory Board</h4>
+        {exp:channel:entries
+          channel="leadership"
+          dynamic="off"
+          category="44"
+          uncategorized_entries="no"
+          orderby="title"
+          sort="asc"
+          cache="yes"
+          refresh="1440"
+          disable="category_fields|member_data|pagination"
+        }
+        <article>
+          <figure>
+            {!-- ra:0000000013ea8aea000000017e767761 --}{if staff_photo == ''}
+            <img src="{site_url}assets/img/graphics/staff-icon-01.png" alt="{title} Photo">
+            {if:else}
+            <img src="{staff_photo:url:150}" alt="{title} Photo">
+            {/if}
+          </figure>
+          <div class="staff-info">
+            <h3>{title}</h3>
+            <p><strong>{staff_position}</strong></p>
+            <p><a href="mailto:{staff_email}">{staff_email}</a></p>
+          </div>
+          <div class="staff-bio">
+            {staff_bio}
+          </div>
+        </article>
+        {/exp:channel:entries}
+      </div>";}

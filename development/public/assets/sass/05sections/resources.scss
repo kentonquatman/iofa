@@ -1,0 +1,138 @@
+/**************************************************
+ RESOURCES PAGE STYLES
+**************************************************/
+
+#resources {
+  .main {
+    h3 {
+      margin-top: 0;
+    }
+  }
+}
+
+%resource-lists {
+  list-style: none;
+  margin: 0;
+  li {
+    @include font-size(10);
+    margin: 0;
+    .main & { max-width: 60em }
+    h4 { margin: 0 }
+    p {
+      @include font-size(12);
+      margin: .5em 0 0;
+      max-width: none;
+    }
+  }
+}
+
+.resources-docs,
+.downloads-docs {
+  @extend %resource-lists;
+  li {
+    margin-bottom: 1em;
+    a {
+      @include border-radius;
+      display: block;
+      padding: 1.5em;
+      background-color: $document-button-bg;
+      border: 1px solid $document-button-border;
+      color: $body-text;
+      @include break-up($small){
+        padding: 1.5em 3em 1.5em 7.5em;
+        background-image: url("../img/graphics/document-icon.svg");
+        background-position: 1.5em 1.5em;
+        background-repeat: no-repeat;
+        background-size: 40px 55px;
+        .ltie9 & { background-image: url("../img/graphics/document-icon.png") }
+      }
+      &:hover,
+      &:focus {
+        background-color: $document-button-hover-bg;
+        border-color: $document-button-hover-border;
+      }
+    }
+    h4 { color: $body-text }
+  }
+}
+
+.resources-docs {margin-bottom:4.5em}
+
+.downloads-docs {
+  margin-top: 7.5em;
+  @include break-up($large){
+    margin-top: 9em;
+  }
+}
+
+.resources-links {
+  @extend %resource-lists;
+  li {
+    padding-top: 1.5em;
+    margin-top: 1.5em;
+    border-top: 1px solid $border-color;
+  }
+}
+
+/**************************************************
+ RESOURCES DOWNLOAD PAGE STYLES
+**************************************************/
+
+.resources-form {
+  @extend %major-column;
+  margin-bottom: 3em;
+  padding-bottom: 4.5em;
+  @include break-up($medium){
+    margin-bottom: 0;
+    padding-bottom: 6em;
+  }
+  input[type="submit"]{
+    margin-top: 1.5em;
+    @include break-up($large){ width: 50% }
+  }
+  .captcha-box {
+    margin-top: 3em;
+    border-top: 1px solid $captcha-border;
+  }
+  .form-info {
+    margin-bottom: 3em;
+    border-bottom: 1px solid $border-color;
+    h3 {
+      @include font-size(18);
+      color: $gray;
+      font-weight: normal;
+      strong {
+        color: $purple;
+        font-style: normal;
+      }
+    }
+    p {
+      @include font-size(12);
+      @include break-up($medium){
+        @include font-size(14);
+      }
+    }
+  }
+}
+
+.download-resource {
+  .main & {padding-bottom: 4.5em}
+  h3 {
+    padding-bottom: 1em;
+    border-bottom: 1px solid $border-color;
+    color: $gray;
+    font-weight: normal;
+    strong {
+      color: $purple;
+      font-style: normal;
+    }
+  }
+  .button {
+    margin-top: 1.75em;
+    text-align: center;
+    @include break-up($small){
+      width: 50%;
+      margin-top: 2.5em;
+    }
+  }
+}

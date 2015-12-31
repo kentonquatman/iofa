@@ -1,0 +1,64 @@
+/**************************************************
+ SELECTION STYLES
+**************************************************/
+
+::selection { background: $selection-bg; text-shadow: none; color: $selection-text; }
+::-moz-selection { background: $selection-bg; text-shadow: none; color: $selection-text; }
+img::selection { background: transparent; }
+img::-moz-selection { background: transparent; }
+
+@media only screen and (max-device-width: 480px) {
+  html {-webkit-text-size-adjust: none}
+  a:link {-webkit-tap-highlight-color: $selection-bg;}
+}
+
+/**************************************************
+ BASE STYLES
+**************************************************/
+
+html {
+  height: 100%;
+  font-size: percentage($base-size/16);
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: $body-bg;
+  font-family: $body-font;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  &.open-nav {
+    overflow-x: hidden;
+  }
+}
+
+body, 
+select, 
+input, 
+textarea {
+  color: $body-text;
+}
+
+.wrapper {
+  @extend %footer-bg;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  min-height: 100%;
+  @include break-down($medium){
+    @include single-transition;
+    width: 100%;
+    right: 0;
+  }
+  .open-nav & {
+    @include break-down($medium){
+      right: 240px;
+    }
+  }
+}
+
+%border-padding {
+  border: 3px solid $border-padding-color;
+}

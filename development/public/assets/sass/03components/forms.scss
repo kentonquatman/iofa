@@ -1,0 +1,111 @@
+/**************************************************
+ DEFAULT FORM STYLES
+**************************************************/
+
+form {
+  padding: 3em;
+  background-color: $form-bg;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+select, 
+textarea {
+  @include border-radius(0);
+  @include font-size(16);
+  display: block;
+  width: 100%;
+  padding: .5em .75em;
+  background-color: $form-field-bg;
+  border: 1px solid $form-field-border;
+  font-family: $form-field-font;
+  -webkit-appearance: none;
+}
+
+textarea {
+  height: 10em;
+  resize: vertical;
+}
+
+select {
+  width: 110%;
+  background-image: url("../img/graphics/select-arrows.svg");
+  background-position: 87.5% 50%;
+  background-repeat: no-repeat;
+  background-size: 16px 19px;
+  border: none;
+  .ltie9 & {background-image:url("../img/graphics/select-arrows.png")}
+}
+
+.select-wrapper {
+  overflow: hidden;
+  border: 1px solid $form-field-border;
+}
+
+input[type="submit"] {
+  @extend button;
+}
+
+button {
+  @include transition;
+  @include button(18, $button-bg, .75em);
+  width: 100%;
+  margin-top: 1em;
+  -webkit-appearance: none;
+}
+
+label {
+  color: $form-label-text;
+  font-weight: normal;
+}
+
+:-moz-placeholder {color: $form-placeholder-text}
+::-moz-placeholder {color: $form-placeholder-text}
+:-ms-input-placeholder {color: $form-placeholder-text}
+::-webkit-input-placeholder {color: $form-placeholder-text}
+
+.errors {
+  margin-bottom: 3em;
+  padding: 2em 3em 2em;
+  background-color: $error-message-bg;
+  border: 1px solid $error-message-border;
+  h4 {
+    margin: 0 0 .75em;
+    color: $error-message-headline;
+  }
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.captcha-box {
+  padding: 1.5em;
+  background-color: $captcha-bg;
+  border: 1px solid $captcha-border;
+  border-top: none;
+  p {
+    margin: 0 0 1em;
+  }
+}
+
+.captcha-field{
+  overflow: hidden;
+  img {
+    float: left;
+    margin-right: .75em;
+  }
+  input {
+    @include font-size(14);
+    float: left;
+    height: 30px;
+    width: 180px;
+    padding: .25em .5em;
+  }
+}
+
+.required {color:$required-indicator}

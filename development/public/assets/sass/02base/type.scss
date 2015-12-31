@@ -1,0 +1,114 @@
+/**************************************************
+ DEFAULT LINK STYLES
+**************************************************/
+
+a {
+  @include transition;
+  text-decoration: none;
+  color: $link-color;
+  &:hover, 
+  &:focus {
+    color: $link-hover;
+  }
+}
+
+/**************************************************
+ DEFAULT TYPE STYLES
+**************************************************/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0;
+  color: $headline-color;
+  font-family: $headline-font;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+h1 {
+  @include font-size(30);
+  @include break-up($large){
+    @include font-size(36);
+  }
+}
+
+h2 {
+  @include font-size(24);
+  @include break-up($large){
+    @include font-size(30);
+  }
+}
+
+h3 {
+  @include font-size(18);
+  @include break-up($large){
+    @include font-size(24);
+  }
+}
+
+h4 {
+  @include font-size(16);
+  @include break-up($large){
+    @include font-size(18);
+  }
+}
+
+h5 {
+  @include font-size(14);
+  @include break-up($large){
+    @include font-size(16);
+  }
+}
+
+h6 {@include font-size(14)}
+
+%base-type {
+  @include font-size(14);
+  line-height: 1.8;
+  @include break-up($large){@include font-size(16)}
+}
+
+p {
+  @extend %base-type;
+  margin: 1em 0;
+}
+
+ol {list-style-type:decimal}
+ul {list-style-type:square}
+
+ul,ol {
+  margin: 1em 0 1em 1.75em;
+  li {
+    @extend %base-type;
+    margin-bottom: 0.25em;
+  }
+}
+
+blockquote {
+  @include font-size(18);
+  max-width: 420px;
+  margin: 2.5em auto;
+  padding: 1em .5em;
+  border: 3px solid $yellow;
+  border-left: none;
+  border-right: none;
+  color: $purple;
+  line-height: 1.4;
+  font-style: italic;
+  text-align: center;
+  @include break-up($small){
+    float: right;
+    width: 50%;
+    margin: 1.5em 0 1.5em 1.5em;
+  }
+  @include break-up($large){
+    @include font-size(24);
+  }
+  p {
+    font-size: 1em;
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+address {@extend %base-type}
+small {@include font-size(12)}

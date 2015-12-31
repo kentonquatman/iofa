@@ -1,0 +1,113 @@
+/**************************************************
+ BLOG SECTION STYLES
+**************************************************/
+
+%article-list {
+  @extend %major-column;
+  margin-bottom: 4.5em;
+  @include break-up($medium){margin-bottom:0}
+  article {
+    @extend %column-reset;
+    position: relative;
+    margin: 0 0 3em;
+    padding-bottom: 6em;
+  }
+  .more {
+    position: absolute;
+    right: (30/14)+em;
+    bottom: 3px;
+    @include break-up($small){right:(45/14)+em}
+  }
+}
+
+.blog-posts,
+.article-list {
+  @extend %article-list;
+}
+
+.blog-article, 
+.news-article,
+.job-post {
+  .main & { padding-bottom: 3px }
+  footer {
+    margin-top: 6em;
+    margin-bottom: -3em;
+    padding-top: 3em;
+    border-top: 1px solid $border-color;
+    font-family: $category-list-font;
+    .back {float:left}
+  }
+}
+
+.post-title {
+  margin: 0 0 1em;
+  padding-bottom: .75em;
+  border-bottom: 1px solid $border-color;
+  color: $post-title-text;
+}
+
+.post-details {
+  @include font-size(12);
+  margin: -.5em 0 1em;
+  color: $post-details-text;
+  font-family: $post-details-font;
+  text-transform: uppercase;
+}
+
+.category-list {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  a {white-space:nowrap}
+}
+
+.more, 
+.back {
+  @include font-size(14);
+  display: block;
+  padding: .75em 1em;
+  background-color: $button-bg;
+  color: $button-text;
+  font-family: $button-font;
+  &:hover,
+  &:focus {
+    background-color: darken($button-bg, 10%);
+    color: $button-color;
+  }
+}
+
+/**************************************************
+ BLOG SIDEBAR
+**************************************************/
+
+.blog-archives { @extend %minor-column }
+
+.monthly-archive {
+  @extend %blog-sidebar-module;
+  @include break-up($small){float:left}
+}
+
+.category-archive {
+  @extend %blog-sidebar-module;
+  @include break-up($small){float:right}
+}
+
+%blog-sidebar-module {
+  @extend %sidebar-links;
+  margin-bottom: 3em;
+  @include break-up($small){width:48.75%}
+  @include break-up($medium){
+    float: none;
+    width: auto;
+  }
+  ul {
+    display: none;
+    @include break-up($medium){display:block}
+    .no-js & {display:block}
+  }
+  .select-wrapper {
+    display: block;
+    border: none;
+    @include break-up($medium){display:none}
+    .no-js & {display:none}
+  }
+}

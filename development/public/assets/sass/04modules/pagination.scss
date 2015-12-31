@@ -1,0 +1,32 @@
+/**************************************************
+ PAGINATION STYLES
+**************************************************/
+
+.pagination {
+  @extend %clearfix;
+  @include border-radius(.6em);
+  background-color: $pagination-bg;
+  @include break-up($medium){
+    margin-top: 4.5em;
+    background-color: transparent;
+  }
+  .prev, 
+  .next {
+    @extend %button;
+    width: 50%;
+    text-align: center;
+    @include break-up($medium){width:25%}
+  }
+  .prev {
+    float: left;
+    @include break-down($medium){
+      @include border-right-radius(0);
+    }
+  }
+  .next {
+    float: right;
+    @include break-down($medium){
+      @include border-left-radius(0);
+    }
+  }
+}

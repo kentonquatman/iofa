@@ -1,0 +1,166 @@
+/**************************************************
+ GLOBAL NAVIGATION STYLES
+**************************************************/
+
+nav {
+  font-family: $nav-font;
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  li {
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+/**************************************************
+ HEADER NAVIGATION STYLES
+**************************************************/
+
+nav {
+  .site-header & {
+    float: left;
+    display: none;
+    @include break-up($medium){display:block}
+    li {
+      @include font-size(14);
+      position: relative;
+      float: left;
+      margin-left: 3px;
+      -webkit-font-smoothing: antialiased;
+      @include break-up($x-large){@include font-size(16)}
+      ul {
+        @include transition;
+        @include opacity(0);
+        @include box-shadow;
+        @include border-radius;
+        position: absolute;
+        z-index: 10;
+        top: 75px;
+        left: 50%;
+        overflow: hidden;
+        height: 0;
+        width: 180px;
+        margin-left: -90px;
+        padding: .75em 0;
+        background-color: $sub-nav-bg;
+        text-align: left;
+      }
+      &:hover {
+        ul {
+          @include opacity(1);
+          top: 81px;
+          height: auto;
+        }
+        a {
+          background-color: $nav-link-bg-hover;
+          border-color: $nav-link-bg-hover;
+          color: $nav-link-text-hover;
+        }
+        li {
+          a {
+            background-color: transparent;
+            color: $nav-link-text;
+            &:hover, 
+            &:focus {
+              background-color: $sub-nav-bg-hover;
+              color: $nav-link-text-hover;
+            }
+          }
+        }
+      }
+      li {
+        @include font-size(14);
+        display: block;
+        float: none;
+        margin: 0;
+        a {
+          display: block;
+          height: auto;
+          padding: .5em 1.5em;
+        }
+      }
+    }
+    a {
+      display: block;
+      height: $header-height;
+      padding: 2.25em 1.75em 0;
+      background-color: $nav-link-bg;
+      color: $nav-link-text;
+      @include break-up($x-large){
+        padding: 2em 2em 0;
+      }
+    }
+  }
+}
+
+/**************************************************
+ PANEL NAVIGATION STYLES
+**************************************************/
+
+nav.side-panel {
+  @include single-transition;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 24em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: $narrow-nav-bg;
+  border-top: 3px solid $border-padding-color;
+  -webkit-overflow-scrolling: touch;
+  @include break-up($medium){
+    display: none !important;
+  }
+  li {
+    @include font-size(16);
+    a {
+      display: block;
+      padding: .75em 10%;
+      background-color: $narrow-toplevel-bg;
+      border-bottom: 3px solid $border-padding-color;
+      color: $narrow-nav-text;
+    }
+    ul {@extend %sub-page-links}
+  }
+}
+
+%sub-page-links {
+  padding: .5em 0;
+  background-color: $narrow-subnav-bg;
+  border-bottom: 3px solid $border-padding-color;
+  li {
+    @include font-size(14);
+    a {
+      background-color: $narrow-subnav-bg;
+      border-bottom: none;
+      color: $narrow-subnav-text;
+    }
+    &:first-child {
+      a {border-top:none}
+    }
+  }
+}
+
+/**************************************************
+ NAVIGATION TOGGLE BUTTON STYLES
+**************************************************/
+
+.nav-toggle {
+  @include transition;
+  overflow: hidden;
+  display: block;
+  float: right;
+  height: 0;
+  width: $header-height;
+  padding-top: $header-height;
+  background: $nav-toggle-bg url("../img/graphics/nav-icon.svg") center center no-repeat;
+  background-size: 45px 30px;
+  @include break-up($medium){display:none}
+  &:hover,&:focus{background-color:$nav-toggle-hover;cursor:pointer}
+  .ltie9 & {background-image:url("../img/graphics/nav-icon.gif")}
+}

@@ -1,0 +1,214 @@
+/**************************************************
+ PROJECTS PAGE STYLES
+**************************************************/
+
+#projects {
+  .main {
+    .inner{
+      padding-bottom: 3em;
+      @include break-up($medium){
+        padding-bottom: 4.5em
+      }
+    }
+    article {
+      float: none;
+      width: auto;
+      margin-bottom: 3em;
+      padding: 1.5em 3em;
+      p {
+        max-width: none;
+        @include break-up($xx-large){
+          @include font-size(18);
+        }
+      }
+    }
+  }
+}
+
+.project-image {
+  margin-bottom: 3em;
+  img {display:block}
+}
+
+/**************************************************
+ CURRENT PROJECTS LIST STYLES
+**************************************************/
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  @include break-up($x-small){
+    width: 102.5%;
+    margin-left: -2.5%;
+    .flexbox.borderimage & {
+      @include display-flex;
+      @include flex-wrap(wrap);
+      width: auto;
+    }
+  }
+  @include break-up($medium){
+    width: 102.33%;
+    margin-left: -2.33%;
+  }
+  @include break-up($xx-large){
+    width: 102%;
+    margin-left: -2%;
+  }
+  li {
+    @include font-size(10);
+    max-width: 36em;
+    margin: 0 auto $side-padding;
+    @include break-up($x-small){
+      float: left;
+      width: 47.5%;
+      margin: 0 0 2.5% 2.5%;
+    }
+    @include break-up($medium){
+      width: 31%;
+      margin-left: 2.33%;
+      margin-bottom: 2.33%;
+    }
+    @include break-up($xx-large){
+      width: 23%;
+      margin-left: 2%;
+      margin-bottom: 2%;
+    }
+  }
+  a {
+    @extend %border-padding;
+    position: relative;
+    display: block;
+    background-color: $yellow;
+    &:hover, 
+    &:focus {
+      img {@include opacity(.25)}
+    }
+  }
+  img {
+    @include transition;
+    display: block;
+    width: 100%;
+  }
+  h4 {
+    @include font-size(16);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: .5em .75em;
+    background-color: $white;
+  }
+}
+
+/**************************************************
+ PAST PROJECT LIST STYLES
+**************************************************/
+
+.past-projects {
+  padding: 3em $side-padding 4.5em;
+  background-color: $past-projects-bg;
+  @include break-up($medium){padding-top:4.5em;padding-bottom:7.5em}
+  h4 {
+    margin: 0 0 1.25em;
+    color: $past-projects-headline;
+  }
+}
+
+.past-list {
+  list-style: none;
+  margin: 0;
+  @include break-up($xx-small){
+    width: 102.5%;
+    margin-left: -2.5%;
+    .flexbox & {
+      width: auto;
+      /* Flexbox Styles */
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+  }
+  @include break-up($small){width:102.33%;margin-left:-2.33%}
+  @include break-up($large){width:102%;margin-left:-2%}
+  @include break-up($xx-large){width:101.5%;margin-left:-1.5%}
+  li {
+    @include font-size(12);
+    margin: .5em 0;
+    font-family: $sans-serif;
+    @include break-up($xx-small){
+      float: left;
+      width: 47.5%;
+      margin: 0 0 2.5% 2.5%;
+      &:nth-child(2n+1){clear:left}
+      .flexbox & {
+        float: none;
+        text-align: center;
+        /* Flexbox */
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+      }
+    }
+    @include break-up($small){
+      width: 31%;
+      margin-left: 2.33%;
+      margin-bottom: 2.33%;
+      &:nth-child(2n+1){clear:none}
+      &:nth-child(3n+1){clear:left}
+    }
+    @include break-up($large){
+      width: 23%;
+      margin-left: 2%;
+      margin-bottom: 2%;
+      &:nth-child(3n+1){clear:none}
+      &:nth-child(4n+1){clear:left}
+    }
+    @include break-up($xx-large){
+      width: 18.5%;
+      margin-left: 1.5%;
+      margin-bottom: 1.25%;
+      &:nth-child(4n+1){clear:none}
+      &:nth-child(5n+1){clear:left}
+    }
+    a {
+      display: block;
+      width: 100%;
+      padding: .75em 1em;
+      background-color: $past-projects-link-bg;
+      color: $past-projects-link-text;
+      &:hover,
+      &:focus {
+        background-color: $past-projects-link-hover-bg;
+        color: $past-projects-link-hover-text;
+      }
+      .flexbox & {
+        width: 100%;
+        /* Flexbox */
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+    }
+    span {
+      .flexbox & {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
