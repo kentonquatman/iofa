@@ -1,0 +1,259 @@
+/**************************************************
+ BASE STYLES
+**************************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: url("../img/bg-tile-01.jpg") center top repeat;
+  color: #4d4d4d;
+  font-size: 62.5%;
+  font-family: alegreya, sans-serif;
+}
+
+.wrapper {
+  padding: 12em 0  9em;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+h1 a {
+  display: block;
+  overflow: hidden;
+  height: 0;
+  width: 180px;
+  margin: 0 auto;
+  padding-top: 75px;
+  background: url("../img/iofa-logo.png") 0 0 no-repeat;
+}
+
+h2 {
+  margin-bottom: .875em;
+  color: #fda61e;
+  font-size: 4.8em;
+  font-family: sancreek, serif;
+  text-align: center;
+}
+
+h3 {
+  margin: 1em 0 1.5em;
+  color: #793d80;
+  font-size: 3em;
+  font-family: emilys-candy, serif;
+  text-align: center;
+}
+
+p {
+  margin: 1em 0;
+  font-size: 1.8em;
+  line-height: 1.8;
+}
+
+a {
+  color: #783f7f;
+  white-space: nowrap;
+}
+
+a:hover, 
+a:focus {
+  color: #4e0057;
+}
+
+/**************************************************
+ ARTICLE STYLES
+**************************************************/
+
+.details, 
+.donate {
+  clear: left;
+  padding: 3em 0 2.4em;
+  background: url("../img/border-image-02.png") center top repeat-x;
+}
+
+.main {
+  width: 750px;
+  margin: 0 auto;
+  padding: 6em;
+  background-color: #fff;
+  border: 24px solid #f2f2f2;
+  -webkit-box-shadow: 0 0 30px rgba(0,0,0,.5);
+  -moz-box-shadow: 0 0 30px rgba(0,0,0,.5);
+  box-shadow: 0 0 30px rgba(0,0,0,.5);
+  -webkit-border-image: url("../img/border-image.png") 24 24 round;
+  -o-border-image: url("../img/border-image.png") 24 24 round;
+  border-image: url("../img/border-image.png") 24 24 round;
+}
+
+.main form {
+  width: 180px;
+  margin: 4.5em auto;
+  padding: 1.8em;
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+  -webkit-border-radius: .25em;
+  -moz-border-radius: .25em;
+  border-radius: .25em;
+}
+
+.sub p {
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.small {
+  color: #b3b3b3;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.bottom {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4.5em 3em;
+  text-align: center;
+}
+
+.bottom p {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+/**************************************************
+ PROGRESS BAR
+**************************************************/
+
+.progress-bar {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.8em 5% 1.5em;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 30px rgba(0,0,0,.5);
+  -moz-box-shadow: 0 0 30px rgba(0,0,0,.5);
+  box-shadow: 0 0 30px rgba(0,0,0,.5);
+}
+
+.progress-bar .inner {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.progress-bar .current, 
+.progress-bar .goal {
+  position: absolute;
+  top: -.125em;
+  margin: 0;
+  font-size: 2.4em;
+}
+
+.progress-bar .current {
+  left: 0;
+} 
+
+.progress-bar .goal {
+  right: 0;
+}
+
+.progress-bar .bar {
+  overflow: hidden;
+  height: 30px;
+  width: 75%;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.progress-bar .status {
+  height: 28px;
+  background: #935b99;
+  background: -moz-linear-gradient(top,  #935b99 0%, #7a3f7f 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#935b99), color-stop(100%,#7a3f7f));
+  background: -webkit-linear-gradient(top,  #935b99 0%,#7a3f7f 100%);
+  background: -o-linear-gradient(top,  #935b99 0%,#7a3f7f 100%);
+  background: -ms-linear-gradient(top,  #935b99 0%,#7a3f7f 100%);
+  background: linear-gradient(to bottom,  #935b99 0%,#7a3f7f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#935b99', endColorstr='#7a3f7f',GradientType=0 );
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 1px solid #613366;
+}
+
+/**************************************************
+ BREAK POINTS
+**************************************************/
+
+@media screen and (max-width: 960px) {
+  .wrapper {
+    padding: 12em 5% 9em;
+  }
+  .main h1 {
+    float: none;
+  }
+  h1 a {
+    margin: 0 auto;
+  }
+  .main {
+    width: auto;
+  }
+  .main h1 {
+    margin-bottom: 1em;
+  }
+  .main h2 {
+    text-align: center;
+    margin: 0 0 1em;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .progress-bar .bar {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .wrapper {
+    padding: 15em 0 9em;
+  }
+  h2 {
+    font-size: 4.2em;
+  }
+  .main {
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h2 {
+    font-size: 3.6em;
+  }
+  .main {
+    padding-left: 2.4em;
+    padding-right: 2.4em;
+  }
+  .progress-bar .current, 
+  .progress-bar .goal {
+    top: .5em;
+    font-size: 1.6em;
+  }
+}
