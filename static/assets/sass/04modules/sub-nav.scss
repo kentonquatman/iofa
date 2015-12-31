@@ -1,0 +1,27 @@
+/**************************************************
+ SUB-NAV STYLES
+**************************************************/
+
+.sub-nav {
+  select {
+    @include break-up($medium){
+      display: none;
+    }
+  }
+  ol {
+    display: none;
+    @include break-up($medium){
+      display: block;
+    }
+  }
+  li {
+    margin: .25em 0;
+  }
+  a {
+    @include border-radius(.25em);
+    display: block;
+    padding: .5em .75em;
+    background-color: $dk-gray;
+    color: $white;
+  }
+}

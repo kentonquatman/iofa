@@ -1,0 +1,148 @@
+/**************************************************
+ FOOTER STYLES
+**************************************************/
+
+%footer-bg {
+  background-color: $footer-bg;
+}
+
+footer {
+  @extend %clearfix;
+  @extend %border-padding;
+  padding: 6em $side-padding;
+  color: $footer-color;
+  text-align: center;
+  @include break-up($medium){
+    text-align: left;
+  }
+  nav {
+    @include float(right);
+    display: none;
+    margin-top: 1.5em;
+    @include break-up($medium){
+      display: block;
+    }
+    li {
+      display: inline;
+      margin: 0 .5em;
+    }
+  }
+  a {
+    color: $footer-link;
+    &:hover,
+    &:focus {
+      color: $footer-link-hover;
+    }
+  }
+  h2 {
+    @include font-size(21);
+    margin-top: 0;
+    margin-bottom: 2em;
+    @include break-up($medium){
+      @include float;
+    }
+    a {
+      @include inline-block;
+      @include border-radius(.25em);
+      padding: .5em 1em;
+      background-color: $gray;
+      color: $white;
+      &:hover, 
+      &:focus {
+        background-color: $lt-gray;
+        color: $white;
+      }
+    }
+  }
+}
+
+%footer-module {
+  margin-bottom: 4.5em;
+  h4 {
+    margin: 0 0 1.5em;
+  }
+  @include break-up($medium){
+    @include float;
+    width: 30%;
+    margin-left: 5%;
+    margin-bottom: 0;
+    padding-top: 3em;
+    border-top: 1px solid $gray;
+  }
+}
+
+.social-links {
+  @extend %footer-module;
+  clear: left;
+  margin-left: 0;
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  li {
+    @include inline-block;
+    @include font-size(10);
+    margin: 0 .25em;
+    @include break-up($medium){
+      margin-left: 0;
+      margin-right: .5em;
+    }
+    a {
+      @include border-radius(50%);
+      overflow: hidden;
+      display: block;
+      height: 0;
+      padding-top: 3em;
+      width: 3em;
+      background-color: $gray;
+      @include break-up($medium){
+        padding-top: 2.4em;
+        width: 2.4em;
+      }
+      &:hover,
+      &:focus {
+        background-color: $lt-gray;
+      }
+    }
+  }
+}
+
+.mailing-list {
+  @extend %footer-module;
+  h4 {
+    @include break-up($medium){
+      text-align: center;
+    }
+  }
+  form {
+    max-width: pem(360);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    border: none;
+  }
+  input[type="text"]{
+    @include border-bottom-radius(0);
+    border: none;
+  }
+  input[type="submit"]{
+    @include border-top-radius(0);
+    @include font-size(14);
+    background-color: $black;
+  }
+}
+
+.contact-info {
+  @extend %footer-module;
+  margin-bottom: 0;
+  @include break-up($medium){
+    text-align: right;
+  }
+  address {
+    br {
+      @include break-up($large){
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+/**************************************************
+ PROJECTS PAGE STYLES
+**************************************************/
+
+#projects {
+  .main {
+    h1 {
+      @include break-up($medium){
+        @include float;
+        margin: 0;
+        width: 30%;
+      }
+    }
+    article {
+      @include reset-float;
+      width: auto;
+      margin: 0 auto 4.5em;
+      @include break-up($medium){
+        margin-left: 35%;
+      }
+    }
+  }
+}
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  @include break-up($small){
+    width: 105%;
+    margin-left: -5%;
+  }
+  @include break-up($medium){
+    width: 103.33%;
+    margin-left: -3.33%;
+  }
+  @include break-up($large){
+    width: 102.5%;
+    margin-left: -2.5%;
+  }
+  li {
+    @include font-size(10);
+    max-width: 36em;
+    margin: 0 auto $side-padding;
+    @include break-up($small){
+      @include float;
+      width: 45%;
+      max-width: none;
+      margin: 0 0 5% 5%;
+    }
+    @include break-up($medium){
+      width: 30%;
+      margin: 0 0 3.33% 3.33%;
+    }
+    @include break-up($large){
+      width: 22.5%;
+      margin: 0 0 2.5% 2.5%;
+    }
+  }
+  a {
+    position: relative;
+    display: block;
+    background-color: $dk-gray;
+    border: 1px solid $border-color;
+    &:hover, 
+    &:focus {
+      img {
+        @include opacity(.5);
+      }
+    }
+  }
+  img {
+    @include transition;
+    display: block;
+    width: 100%;
+  }
+  h4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: .5em .75em;
+    background-color: $white;
+  }
+}
+
+.past-projects {
+  background-color: lighten($lt-gray, 20%);
+}
+
+.past-list {
+  list-style: none;
+  width: 105%;
+  margin: 0 0 0 -5%;
+  @include break-up($small){
+    width: 103.33%;
+    margin-left: -3.33%;
+  }
+  @include break-up($medium){
+    width: 102.5%;
+    margin-left: -2.5%;
+  }
+  @include break-up($large){
+    width: 101.25%;
+    margin-left: -1.25%;
+  }
+  li {
+    @include float;
+    width: 45%;
+    margin: 0 0 5% 5%;
+    @include break-up($small){
+      width: 30%;
+      margin-left: 3.33%;
+      margin-bottom: 3.33%;
+    }
+    @include break-up($medium){
+      width: 22.5%;
+      margin-left: 2.5%;
+      margin-bottom: 2.5%;
+    }
+    @include break-up($large){
+      width: 18.75%;
+      margin-left: 1.25%;
+      margin-bottom: 1.25%;
+    }
+    a {
+      @include border-radius(.25em);
+      display: block;
+      padding: .5em .75em;
+      background-color: $gray;
+      color: $white;
+    }
+  }
+}

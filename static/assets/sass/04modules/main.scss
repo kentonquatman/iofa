@@ -1,0 +1,67 @@
+/**************************************************
+ MAIN SECTION STYLES
+**************************************************/
+
+.main {
+  @extend %border-padding;
+  background-color: $main-bg;
+  @include break-up($large){
+    padding-top: $fixed-header-padding;
+  }
+  header {
+    margin-bottom: 4.5em;
+    h1 {
+      margin: 0;
+      color: $dk-gray;
+      font-weight: normal;
+      @include break-up($medium){
+        @include font-size(48);
+      }
+    }
+  }
+  article {
+    @extend %major-column;
+    margin-bottom: 4.5em;
+    .button {
+      margin: 1.5em 0;
+      @include break-up($medium){ width: 50% }
+    }
+  }
+  aside {
+    @extend %minor-column;
+    @include border-radius(.25em);
+    overflow: hidden;
+    padding: 1.5em;
+    background-color: $lt-gray;
+    border: 1px solid $gray;
+  }
+}
+
+.legal-text { 
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid $border-color;
+  p {
+    @include font-size(12);
+  }
+}
+
+.illustration {
+  position: relative;
+  padding: 0;
+  background-color: $illustration-bg;
+  height: 150px;
+  @include break-up($small){height:225px}
+  @include break-up($large){height:300px}
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 600px;
+    max-width: none;
+    margin-left: -300px;
+    @include break-up($small){width:900px;margin-left:-450px}
+    @include break-up($large){width:1200px;margin-left:-600px}
+  }
+}

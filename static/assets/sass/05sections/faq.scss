@@ -1,0 +1,28 @@
+/**************************************************
+ FAQ PAGE STYLES
+**************************************************/
+
+.faq-list {
+  list-style: none;
+  margin: 0 0 4.5em;
+  border-bottom: 1px solid $border-color;
+  li {
+    @include font-size(16);
+    margin: 0;
+    padding: .5em 0;
+    border-top: 1px solid $border-color;
+  }
+}
+
+.answer {
+  margin-top: 3em;
+  padding-top: 3em;
+  border-top: 1px solid $border-color;
+  &.first {
+    margin-top: 0;
+    border-top: none;
+  }
+  h3 {
+    margin: 0 0 1em;
+  }
+}

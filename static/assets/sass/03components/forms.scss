@@ -1,0 +1,51 @@
+/**************************************************
+ DEFAULT FORM STYLES
+**************************************************/
+
+form {
+  padding: 3em;
+  background-color: $lt-purple;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+select, 
+textarea {
+  @include border-radius(0);
+  @include font-size(16);
+  width: 100%;
+  margin-bottom: 1em;
+  padding: .5em .75em;
+  border: none;
+  border: 1px solid $purple;
+  -webkit-appearance: none;
+}
+
+input[type="submit"] {
+  @extend button;
+}
+
+textarea {
+  height: 10em;
+  resize: vertical;
+}
+
+button {
+  @include transition;
+  @include button(18, $purple, .75em);
+  width: 100%;
+  margin-top: 1em;
+  -webkit-appearance: none;
+}
+
+select {
+}
+
+label {
+  color: $black;
+  font-weight: normal;
+}

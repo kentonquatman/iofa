@@ -1,0 +1,57 @@
+/**************************************************
+ HEADER STYLES
+**************************************************/
+
+.site-header {
+  @extend %clearfix;
+  @extend %border-padding;
+  position: relative;
+  background-color: $header-bg;
+  @include break-up($medium){
+    @include box-shadow;
+    position: relative;
+    z-index: 10;
+  }
+  @include break-up($large){
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  h1 {
+    @include font-size(10);
+    margin: 0 ($header-height + 3px) 0 0;
+    text-align: center;
+    @include break-up($medium){
+      @include float;
+      width: 144px;
+      margin-right: 0;
+    }
+    a {
+      display: block;
+      overflow: hidden;
+      height: 0;
+      padding-top: $header-height;
+      margin: 0 auto;
+      background: $header-logo-bg url("../img/logo/iofa-header-logo.svg") center center no-repeat;
+      background-size: 100px 40px;
+      color: $white;
+      &:hover,&:focus{background-color:$header-logo-hover}
+      .ltie9 & {background-image:url("../img/logo/iofa-header-logo.png")}
+    }
+  }
+}
+
+.donate-button {
+  @include float(right);
+  @extend %button;
+  display: none;
+  margin: (17/16)+em 1em 0 0;
+  @include break-up($large){display:block}
+  @include break-up($x-large){
+    @include font-size(18);
+    margin-top: (14/18)+em;
+  }
+  @include break-up(1260){margin-right:0}
+}

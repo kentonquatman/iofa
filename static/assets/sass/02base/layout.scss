@@ -1,0 +1,47 @@
+/**************************************************
+ LAYOUT STYLES
+**************************************************/
+
+%center-column {
+  max-width: 120em;
+  margin: 0 auto;
+}
+
+.inner {
+  @extend %center-column;
+}
+
+section {
+  @extend %clearfix;
+  padding: 4.5em $side-padding;
+  @include break-up($medium){
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+}
+
+%major-column {
+  @include break-up($medium){
+    @include float;
+    width: 65%;
+  }
+}
+
+%major-column-reset {
+  @include reset-float;
+  display: block;
+  width: auto;
+}
+
+%minor-column {
+  @include break-up($medium){
+    @include float(right);
+    width: 27.5%;
+  }
+}
+
+%column-reset {
+  @include reset-float;
+  display: block;
+  width: auto;
+}

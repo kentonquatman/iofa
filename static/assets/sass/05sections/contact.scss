@@ -1,0 +1,11 @@
+/**************************************************
+ CONTACT PAGE STYLES
+**************************************************/
+
+.contact-form {
+  @extend %major-column;
+  margin-bottom: 3em;
+  input[type="submit"]{
+    @include break-up($large){ width: 50% }
+  }
+}

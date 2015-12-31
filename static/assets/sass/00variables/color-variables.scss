@@ -1,0 +1,101 @@
+/**************************************************
+ COLOR PALETTE
+**************************************************/
+
+$purple: #601f66;
+$lt-purple: #f4edf5;
+$yellow: #ffc44d;
+$lt-yellow: #f2e6ce;
+$black: #222622;
+$dk-gray: #4c454d;
+$gray: #7f7980;
+$lt-gray: #cbc6cc;
+$white: #fff;
+
+/**************************************************
+ COLOR USAGE
+**************************************************/
+
+$selection-bg: transparentize($dk-gray, 0.5);
+$selection-text: $black;
+
+// Base Colors
+
+$body-bg: $white;
+$body-text: $black;
+$border-color: $lt-gray;
+
+$headline-color: $purple;
+
+// Link Colors
+
+$link-color: darken($yellow, 5%);
+$link-hover: darken($yellow, 15%);
+
+// Button Colors
+
+$button-color: $white;
+$button-text: $white;
+$button-bg: $yellow;
+
+// Header Colors
+
+$header-bg: $white;
+$header-logo-bg: $purple;
+$header-logo-hover: darken($purple, 5%);
+$header-donate-button-text: $white;
+$header-donate-button-bg: $yellow;
+$header-donate-button-hover: darken($yellow, 10%);
+
+// Navigation Colors
+
+$nav-link-color: $gray;
+$nav-link-bg: $white;
+$nav-link-color-hover: $purple;
+$nav-link-bg-hover: $lt-purple;
+
+$sub-nav-bg: $white;
+$sub-nav-bg-hover: $lt-purple;
+$sub-nav-border: $yellow;
+
+$narrow-nav-bg: $purple;
+$narrow-nav-color: $white;
+$narrow-toplevel-bg: $yellow;
+$narrow-subnav-color: $gray;
+$narrow-subnav-bg: $white;
+
+$nav-toggle-bg: $yellow;
+$nav-toggle-hover: darken($yellow, 5%);
+
+// Footer Colors
+
+$footer-bg: $purple;
+$footer-color: $white;
+$footer-link: $yellow;
+$footer-link-hover: $lt-yellow;
+
+// Main Colors
+
+$main-bg: $white;
+$border-padding-color: $white;
+$illustration-bg: $yellow;
+
+// Home Page Colors
+
+$home-blog-bg: $lt-purple;
+
+$slider-bg: $yellow;
+$slider-border: $purple;
+$slider-headline-color: $purple;
+$slider-summary-bg: $white;
+$slider-summary-border: $yellow;
+$slider-summary-text: $body-text;
+$slide-summary-hover-bg: $purple;
+$slide-summary-hover-text: $white;
+$slide-pager-bg: $purple;
+$slide-marker: $white;
+$slide-marker-hover: $lt-yellow;
+$slide-marker-active: $yellow;
+
+$directional-nav-bg: $white;
+$directional-nav-border: $yellow;

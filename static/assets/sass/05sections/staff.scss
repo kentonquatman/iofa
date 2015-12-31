@@ -1,0 +1,63 @@
+/**************************************************
+ FAQ PAGE STYLES
+**************************************************/
+
+.staff-list {
+  overflow: hidden;
+  list-style: none;
+  margin: 0 0 6em;
+  @include break-up($small){
+    width: 102.5%;
+    margin-left: -2.5%;
+  }
+  @include break-up($medium){
+    width: auto;
+    margin-left: 0;
+  }
+  @include break-up($large){
+    width: 102.5%;
+    margin-left: -2.5%;
+  }
+  li {
+    @include border-radius(.25em);
+    overflow: hidden;
+    margin-bottom: .5em;
+    padding: 1em;
+    background-color: lighten($lt-gray, 20%);
+    @include break-up($small){
+      @include float;
+      width: 47.5%;
+      margin: 0 0 2.5% 2.5%;
+    }
+    @include break-up($medium){
+      @include reset-float;
+      width: auto;
+      margin: 0 0 1em;
+    }
+    @include break-up($large){
+      @include float;
+      width: 47.5%;
+      margin: 0 0 2.5% 2.5%;
+    }
+  }
+  figure {
+    @include float;
+    width: pem(90);
+    padding: .25em;
+    background-color: $white;
+    border: 1px solid $border-color;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .staff-info {
+    margin-left: pem(110);
+  }
+  h4 {
+    margin: .25em 0;
+  }
+  p {
+    margin: 0 0 .125em;
+  }
+}

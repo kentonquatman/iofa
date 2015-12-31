@@ -1,0 +1,123 @@
+/**************************************************
+ BLOG SECTION STYLES
+**************************************************/
+
+#blog {
+  .main {
+    .post-title {
+      margin: 0 0 .5em;
+    }
+    .post-details {
+      @include font-size(12);
+    }
+  }
+  .posts {
+    @extend %major-column;
+    article {
+      @extend %major-column-reset;
+      margin-bottom: 3em;
+      padding-bottom: 3em;
+      border-bottom: 1px solid $border-color;
+    }
+    .more, 
+    .back {
+      margin: 1.5em 0 0;
+      a {
+        @extend %button;
+        @include inline-block;
+        @include font-size(14);
+      }
+    }
+  }
+}
+
+.pagination {
+  position: relative;
+  height: 4em;
+  margin-bottom: 3em;
+  .prev, 
+  .next {
+    @extend %button;
+    position: absolute;
+    top: 0;
+    width: 47.5%;
+    @include break-up($medium){
+      width: 20%;
+    }
+  }
+  .prev { left: 0; }
+  .next { right: 0; }
+  ol {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-top: .75em;
+    text-align: center;
+    @include break-up($medium){
+      display: block;
+    }
+    li {
+      @include font-size(18);
+      display: inline;
+      margin: 0 .5em;
+    }
+  }
+}
+
+.monthly-archive {
+  @include break-up($small){
+    @include float;
+  }
+  h4 {
+    margin-top: .25em;
+  }
+}
+
+.category-archive {
+  @include break-up($small){
+    @include float(right);
+  }
+  h4 {
+    margin-top: 1.5em;
+    @include break-up($small){
+      margin-top: .25em;
+    }
+    @include break-up($medium){
+      margin-top: 1.5em;
+    }
+  }
+}
+
+.monthly-archive, 
+.category-archive {
+  @include break-up($small){
+    width: 47.5%;
+  }
+  @include break-up($medium){
+    @include reset-float;
+    width: auto;
+  }
+  h4 {
+    margin-bottom: 1em;
+  }
+  ol {
+    display: none;
+    list-style: none;
+    margin: 0;
+    @include break-up($medium){
+      display: block;
+    }
+    a {
+      @include border-radius(.25em);
+      display: block;
+      padding: .25em .5em;
+      background-color: $gray;
+      color: $white;
+    }
+  }
+  select {
+    @include break-up($medium){
+      display: none;
+    }
+  }
+}
